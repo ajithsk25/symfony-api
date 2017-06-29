@@ -36,9 +36,9 @@ security:
         admin:
             anonymous: ~
             form_login:
-                login_path: login
-                check_path: login
-                default_target_path: /admin/home
+                login_path: ignitho.admin.login
+                check_path: ignitho.admin.login
+                default_target_path: ignitho.admin.home
             logout:
                 path:   /logout
                 target: /

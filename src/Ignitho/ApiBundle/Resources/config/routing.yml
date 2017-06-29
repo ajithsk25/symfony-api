@@ -1,5 +1,11 @@
-ignitho_api_page:
+ignitho.api:
     type: rest
     name_prefix: api_1_
     prefix: /v1
     resource: 'Ignitho\ApiBundle\Controller\ApiController'
+
+ignitho.api.user:
+    type: rest
+    name_prefix: api_1_
+    prefix: /v1
+    resource: 'Ignitho\ApiBundle\Controller\UserApiController'
