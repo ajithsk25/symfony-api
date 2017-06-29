@@ -1,0 +1,12 @@
+login:
+    path: /login
+    defaults: { _controller: IgnithoAdminBundle:Security:login }
+
+home:
+    path: /admin/home
+    defaults: { _controller: IgnithoAdminBundle:Admin:home }
+    prefix:
+
+welcome:
+    path:     /
+    defaults: { _controller: IgnithoAdminBundle:Page:welcome }

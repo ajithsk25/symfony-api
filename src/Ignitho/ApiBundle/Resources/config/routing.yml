@@ -1,0 +1,5 @@
+ignitho_api_page:
+    type: rest
+    name_prefix: api_1_
+    prefix: /v1
+    resource: 'Ignitho\ApiBundle\Controller\ApiController'
