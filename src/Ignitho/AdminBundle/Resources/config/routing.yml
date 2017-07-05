@@ -1,3 +1,7 @@
+ignitho.admin.admin_page:
+    resource: "@IgnithoAdminBundle/Resources/config/routing/page.yml"
+    prefix:   /admin/page
+
 ignitho.admin.login:
     path: /login
     defaults: { _controller: IgnithoAdminBundle:Security:login }
@@ -7,10 +11,10 @@ ignitho.admin.home:
     defaults: { _controller: IgnithoAdminBundle:Admin:home }
     prefix: /admin
 
-ignitho.admin.welcome:
-    path:     /
-    defaults: { _controller: IgnithoAdminBundle:Page:welcome }
-
 ignitho.admin.register:
     path:     /register
     defaults: { _controller: IgnithoAdminBundle:Registration:register }
+
+ignitho.admin.front_page:
+    path:     /
+    defaults: { _controller: IgnithoAdminBundle:Welcome:frontPage }

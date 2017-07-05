@@ -1,4 +1,9 @@
 services:
-#    ignitho_admin.example:
-#        class: Ignitho\AdminBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    ignitho.admin.service.page_controller:
+        class: Ignitho\AdminBundle\Controller\PageController
+        arguments: ['@doctrine.orm.entity_manager', '@ignitho.admin.service.request']
+
+    ignitho.admin.service.request:
+        class: Symfony\Component\HttpFoundation\Request
+
+    Symfony\Component\HttpFoundation\Request: '@ignitho.admin.service.request'

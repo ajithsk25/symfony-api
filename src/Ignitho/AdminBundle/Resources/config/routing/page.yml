@@ -1,0 +1,24 @@
+ignitho.admin.page_index:
+    path:     /
+    defaults: { _controller:ignitho.admin.service.page_controller:indexAction }
+    methods:  GET
+
+ignitho.admin.page_show:
+    path:     /{id}/show
+    defaults: { _controller:ignitho.admin.service.page_controller:showAction }
+    methods:  GET
+
+ignitho.admin.page_new:
+    path:     /new
+    defaults: { _controller:ignitho.admin.service.page_controller:newAction }
+    methods:  [GET, POST]
+
+ignitho.admin.page_edit:
+    path:     /{id}/edit
+    defaults: { _controller:ignitho.admin.service.page_controller:editAction }
+    methods:  [GET, POST]
+
+ignitho.admin.page_delete:
+    path:     /{id}/delete
+    defaults: { _controller:ignitho.admin.service.page_controller:deleteAction }
+    methods:  DELETE

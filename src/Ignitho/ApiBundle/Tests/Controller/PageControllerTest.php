@@ -1,6 +1,6 @@
 <?php
 
-namespace Ignitho\AdminBundle\Tests\Controller;
+namespace Ignitho\ApiBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -19,7 +19,7 @@ class PageControllerTest extends WebTestCase
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'ignitho_adminbundle_page[field_name]'  => 'Test',
+            'ignitho_apibundle_page[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class PageControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'ignitho_adminbundle_page[field_name]'  => 'Foo',
+            'ignitho_apibundle_page[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 
