@@ -2,18 +2,23 @@
 
 namespace Ignitho\AdminBundle\Form;
 
+use Ignitho\AdminBundle\Entity\Page;
+use Ignitho\ApiBundle\Form\ApiFormInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PageType extends AbstractType
+class PageType extends AbstractType implements ApiFormInterface
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title')->add('body');
+        $builder
+            ->add('title')
+            ->add('body')
+        ;
     }
     
     /**
@@ -22,7 +27,7 @@ class PageType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Ignitho\AdminBundle\Entity\Page'
+            'data_class' => Page::class
         ));
     }
 

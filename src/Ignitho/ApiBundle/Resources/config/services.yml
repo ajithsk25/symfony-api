@@ -1,4 +1,9 @@
+parameters:
+    ignitho.api.handler.class: Ignitho\ApiBundle\Handler\ApiHandler
+    ignitho.admin.entity.page.class: Ignitho\AdminBundle\Entity\Page
+    ignitho.admin.form.page.class: Ignitho\AdminBundle\Form\PageType
+
 services:
-#    ignitho_api.example:
-#        class: Ignitho\ApiBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    ignitho.api.page.handler:
+        class: '%ignitho.api.handler.class%'
+        arguments: ['@doctrine.orm.entity_manager', '%ignitho.admin.entity.page.class%', '%ignitho.admin.form.page.class%', '@form.factory', '@service_container']

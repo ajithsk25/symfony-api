@@ -3,6 +3,8 @@
 namespace Ignitho\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Ignitho\ApiBundle\Entity\ApiEntityInterface;
 
 /**
  * Page
@@ -10,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="page")
  * @ORM\Entity(repositoryClass="Ignitho\AdminBundle\Repository\PageRepository")
  */
-class Page
+class Page implements ApiEntityInterface
 {
     /**
      * @var int
@@ -25,6 +27,7 @@ class Page
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=45)
+     * @Assert\NotBlank(message="The title cannot be blank")
      */
     private $title;
 
@@ -32,6 +35,7 @@ class Page
      * @var string
      *
      * @ORM\Column(name="body", type="string", length=255)
+     * @Assert\NotBlank(message="The body cannot be blank")
      */
     private $body;
 

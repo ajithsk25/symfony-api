@@ -2,7 +2,7 @@
 
 namespace Ignitho\ApiBundle\Exception;
 
-class InvalidForm extends \RuntimeException
+class InvalidFormException extends \RuntimeException
 {
     protected $form;
 

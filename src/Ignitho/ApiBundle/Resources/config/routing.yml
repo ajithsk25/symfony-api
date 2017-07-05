@@ -4,8 +4,8 @@ ignitho.api:
     prefix: /v1
     resource: 'Ignitho\ApiBundle\Controller\ApiController'
 
-ignitho.api.user:
+post_page:
     type: rest
-    name_prefix: api_1_
     prefix: /v1
-    resource: 'Ignitho\ApiBundle\Controller\UserApiController'
+#    parent: ignitho.api
+    resource: 'Ignitho\ApiBundle\Controller\PageApiController'

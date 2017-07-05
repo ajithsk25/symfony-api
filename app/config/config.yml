@@ -102,11 +102,11 @@ fos_rest:
         formats:
             xml: true
             json: true
-        templating_formats:
-            html: true
+#        templating_formats:
+#            html: true
     format_listener:
         rules:
-            - { path: ^/, priorities: [ html, json, xml ], fallback_format: ~, prefer_extension: false }
+            - { path: ^/, priorities: [json, xml ], fallback_format: ~, prefer_extension: false }
     exception:
         codes:
             'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
@@ -117,6 +117,6 @@ fos_rest:
     access_denied_listener:
         json: true
     body_listener: true
-    disable_csrf_role: ROLE_API
+    disable_csrf_role: IS_AUTHENTICATED_ANONYMOUSLY
 
 nelmio_api_doc: ~
