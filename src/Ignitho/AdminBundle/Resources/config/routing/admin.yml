@@ -1,0 +1,7 @@
+ignitho.admin.admin_page:
+    resource: "@IgnithoAdminBundle/Resources/config/routing/page.yml"
+    prefix:   /page
+
+ignitho.admin.home:
+    path: /home
+    defaults: { _controller: IgnithoAdminBundle:Admin:home }

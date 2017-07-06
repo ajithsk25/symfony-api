@@ -12,9 +12,9 @@ security:
             cost: 12
 
     role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
+        ROLE_ADMIN: ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-        ROLE_API: IS_AUTHENTICATED_ANONYMOUSLY
+        ROLE_USER: ROLE_API
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
@@ -46,5 +46,5 @@ security:
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api, roles: [IS_AUTHENTICATED_ANONYMOUSLY] }
+        - { path: ^/api, roles: ROLE_API }
         - { path: ^/admin, roles: ROLE_ADMIN }

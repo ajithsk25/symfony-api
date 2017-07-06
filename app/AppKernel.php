@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new Ignitho\ApiBundle\IgnithoApiBundle(),
             new Ignitho\AdminBundle\IgnithoAdminBundle(),
+            new \Symfony\Bundle\AsseticBundle\AsseticBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

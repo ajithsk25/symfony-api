@@ -1,4 +1,8 @@
 ignitho_admin:
+    resource: "@IgnithoAdminBundle/Resources/config/routing/admin.yml"
+    prefix:   /admin
+
+ignitho_front:
     resource: "@IgnithoAdminBundle/Resources/config/routing.yml"
     prefix:   /
 

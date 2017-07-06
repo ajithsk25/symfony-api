@@ -1,9 +1,8 @@
-{% extends "::base.html.twig" %}
+{% extends "IgnithoAdminBundle:Layout:layout.html.twig" %}
 
 {% block title %}IgnithoAdminBundle:Welcome:frontPage{% endblock %}
 
-{% block body %}
-<h1>Welcome to the Welcome:frontPage page</h1>
-    <a href="{{ path('ignitho.admin.login') }}">login</a>
-    <a href="{{ path('ignitho.admin.register') }}">register</a>
+{% block content %}
+    <h1>Welcome</h1>
 {% endblock %}
+

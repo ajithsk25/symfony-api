@@ -1,9 +1,7 @@
-{% extends "::base.html.twig" %}
+{% extends "IgnithoAdminBundle:Layout:loginLayout.html.twig" %}
 
 {% block title %}IgnithoAdminBundle:Admin:home{% endblock %}
 
-{% block body %}
-<h1>Welcome to the Admin:home page</h1>
-    <a href="{{ path('ignitho.admin.page_index') }}">page</a>
-    <a href="{{ path('logout') }}">logout</a>
+{% block content %}
+    <h1>Welcome to the Admin:home page</h1>
 {% endblock %}
